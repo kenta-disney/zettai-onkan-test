@@ -89,12 +89,13 @@ button {
     .piano.easy-mode {
         transform: scale(0.7); /* Easyモード用の縮小 */
         transform-origin: top center; /* 中央揃え */
-        margin: 0 auto;
+        margin: 0 20px; /* 左右に20pxの余白を追加 */
     }
 
     .piano.normal-mode {
         transform: scale(0.5); /* Normalモード用の縮小 */
         transform-origin: top center; /* 中央揃え */
-        margin: 0 auto;
+        margin: 0 20px; /* 左右に20pxの余白を追加 */
     }
 }
+
