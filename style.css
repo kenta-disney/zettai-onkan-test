@@ -23,12 +23,13 @@ body {
     margin-top: 20px;
 }
 
+/* ピアノのスタイル（デフォルト） */
 .white {
     width: 80px;
     height: 320px;
     background-color: white;
     border: 1px solid gray;
-    position: relative; /* 音名の表示のために位置を調整 */
+    position: relative;
 }
 
 .black {
@@ -56,9 +57,9 @@ button {
 }
 
 .key.pressed {
-    background-color: lightgray; /* 鍵盤が押されたときの色 */
-    transform: translateY(4px); /* 鍵盤が押されたときに少し下に移動 */
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2); /* 押された感じのシャドウ */
+    background-color: lightgray;
+    transform: translateY(4px);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
 }
 
 #difficulty-screen {
@@ -69,7 +70,6 @@ button {
     margin: 10px;
 }
 
-/* 音名を表示するためのスタイル */
 .key {
     position: relative;
 }
@@ -79,7 +79,15 @@ button {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    color: #d3d3d3; /* 音名の色 */
+    color: #d3d3d3;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* スマートフォン用のメディアクエリ */
+@media (max-width: 600px) {
+    .piano {
+        transform: scale(0.7); /* ピアノを縮小 */
+        transform-origin: top left; /* 縮小の基準点を左上に設定 */
+    }
 }
