@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <title>音当てゲーム</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="http://unpkg.com/tone"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- タイトル画面 -->
+  <div id="title-screen" class="screen">
+    <h1>音当てゲーム</h1>
+    <button id="start-game-button">ゲーム開始</button>
+  </div>
+
+  <!-- 難易度選択画面 -->
+  <div id="difficulty-screen" class="screen hidden">
+    <h1>難易度選択</h1>
+    <button id="easy-mode-button">Easyモード</button>
+    <button id="normal-mode-button">Normalモード</button>
+    <button id="back-to-title-button-difficulty">タイトルに戻る</button>
+  </div>
+
+  <!-- プレイ画面 -->
+  <div id="play-screen" class="screen hidden">
+    <div id="stopwatch">00:00</div>
+    <div id="question-count">問題 1 / 3</div> <!-- 追加 -->
+    <div class="piano">
+        <div data-sound="do" class="key white">
+            <span class="key-label">C4</span>
+        </div>
+      <div data-sound="do-sharp" class="key black"></div>
+      <div data-sound="re" class="key white"></div>
+      <div data-sound="re-sharp" class="key black"></div>
+      <div data-sound="mi" class="key white"></div>
+      <div data-sound="fa" class="key white"></div>
+      <div data-sound="fa-sharp" class="key black"></div>
+      <div data-sound="so" class="key white"></div>
+      <div data-sound="so-sharp" class="key black"></div>
+      <div data-sound="ra" class="key white"></div>
+      <div data-sound="ra-sharp" class="key black"></div>
+      <div data-sound="si" class="key white"></div>
+      <!-- 新しい音の鍵盤 -->
+      <div data-sound="do5" class="key white hidden">
+        <span class="key-label">C5</span>
+      </div>
+      <div data-sound="do-sharp5" class="key black"></div>
+      <div data-sound="re5" class="key white"></div>
+      <div data-sound="re-sharp5" class="key black"></div>
+      <div data-sound="mi5" class="key white"></div>
+      <div data-sound="fa5" class="key white"></div>
+    </div>
+    <button id="retry-button">リトライ</button>
+    <button id="back-to-title-button">タイトルに戻る</button>
+  </div>
+
+  <!-- リザルト画面 -->
+  <div id="result-screen" class="screen hidden">
+    <p id="score"></p>
+    <p id="play-time"></p>
+    <button id="retry-button-result">リトライ</button>
+    <button id="back-to-title-button-result">タイトルに戻る</button>
+  </div>
+</body>
+</html>
