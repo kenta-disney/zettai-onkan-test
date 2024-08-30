@@ -86,8 +86,15 @@ button {
 
 /* スマートフォン用のメディアクエリ */
 @media (max-width: 600px) {
-    .piano {
-        transform: scale(0.7); /* ピアノを縮小 */
-        transform-origin: top left; /* 縮小の基準点を左上に設定 */
+    .piano.easy-mode {
+        transform: scale(0.7); /* Easyモード用の縮小 */
+        transform-origin: top center; /* 中央揃え */
+        margin: 0 auto;
+    }
+
+    .piano.normal-mode {
+        transform: scale(0.5); /* Normalモード用の縮小 */
+        transform-origin: top center; /* 中央揃え */
+        margin: 0 auto;
     }
 }

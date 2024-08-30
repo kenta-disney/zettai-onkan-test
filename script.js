@@ -253,13 +253,20 @@ function showResult() {
 
 // 鍵盤の表示を切り替える
 function showPianoKeys() {
+    const pianoElement = document.querySelector('.piano');
     const newKeys = document.querySelectorAll('.key[data-sound*="5"]');
+
     if (mode === 'easy') {
-      newKeys.forEach(key => key.classList.add('hidden'));
+        newKeys.forEach(key => key.classList.add('hidden'));
+        pianoElement.classList.add('easy-mode');
+        pianoElement.classList.remove('normal-mode');
     } else if (mode === 'normal') {
-      newKeys.forEach(key => key.classList.remove('hidden'));
+        newKeys.forEach(key => key.classList.remove('hidden'));
+        pianoElement.classList.add('normal-mode');
+        pianoElement.classList.remove('easy-mode');
     }
-  }
+}
+
 
 // 画面の切り替え
 function showScreen(screen) {
